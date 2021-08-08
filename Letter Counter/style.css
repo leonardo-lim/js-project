@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-height: 100vh;
+    background-image: linear-gradient(red, brown);
+    font-family: 'Century Gothic';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    position: absolute;
+    transform: translateY(-150px);
+    font-size: 3rem;
+}
+
+input {
+    appearance: none;
+    border: none;
+    outline: none;
+}
+
+#input {
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 0 5px white;
+    font-size: 1.5rem;
+    display: block;
+    cursor: text;
+    transform: scale(1, 1);
+    transition: .3s;
+}
+
+#input:hover {
+    transform: scale(1.05, 1.05);
+}
+
+::placeholder {
+    color: brown;
+}
+
+.text {
+    margin: 0px 15px;
+    font-size: 2rem;
+    display: inline-flex;
+}
+
+.result {
+    width: 80px;
+    height: 40px;
+    margin: 0 15px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 0 5px black;
+    text-align: center;
+    font-size: 2rem;
+    transform: scale(1, 1);
+    transition: .3s;
+}
+
+.result:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 0 5px white;
+    transform: scale(1.05, 1.05);
+}

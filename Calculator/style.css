@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-height: 100vh;
+    background-image: linear-gradient(320deg, black, orangered, black);
+}
+
+.light {
+    background-image: linear-gradient(320deg, #43c6ac, #f8ffae, #43c6ac);
+}
+
+/* Container (Dark mode) */
+
+.container {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background: rgb(40, 40, 40);
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .2);
+}
+
+.screen {
+    margin-bottom: 20px;
+    background: black;
+    color: orangered;
+    font-family: 'Century Gothic';
+    font-size: 2rem;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: minmax(auto, 50px);
+    grid-template-columns: minmax(auto, 300px);
+    transform: scale(1, 1);
+    transition: .3s;
+}
+
+.screen:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.previous, .current {
+    margin: 10px 15px 0 15px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    overflow: auto;
+}
+
+.previous {
+    font-size: 1.5rem;
+}
+
+.operator {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+}
+
+button {
+    margin: 7px;
+    width: 60px;
+    height: 60px;
+    background: orangered;
+    color: black;
+    font-family: 'Century Gothic';
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 0 5px black,
+                0 0 5px 8px rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: .3s;
+}
+
+button:hover {
+    background: orange;
+    color: white;
+    transform: scale(1.05, 1.05);
+}
+
+.diff-color {
+    background: red;
+}
+
+.diff-color:hover {
+    background: black;
+    transform: scale(1, 1);
+}
+
+.fa {
+    pointer-events: none;
+}
+
+.double {
+    width: 134px;
+    grid-column: span 2;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-corner {
+    background: none;
+}
+
+/* Container (Light mode) */
+
+.light .container {
+    background: white;
+}
+
+.light .screen {
+    background: rgba(230, 230, 230);
+    color: blue;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .2);
+}
+
+.light button {
+    background: aqua;
+    box-shadow: 0 0 0 5px white,
+                0 0 5px 8px rgba(255, 255, 255, .2);
+}
+
+.light button:hover {
+    background: blue;
+    color: white;
+    transform: scale(1.05, 1.05);
+}
+
+.light .diff-color {
+    background: #0083b0;
+}
+
+.light .diff-color:hover {
+    background: black;
+    transform: scale(1, 1);
+}
+
+.light ::-webkit-scrollbar {
+    background: aqua;
+}
+
+.light ::-webkit-scrollbar-thumb {
+    background: #0083b0;
+}
+
+/* Switch Button */
+
+.switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.text {
+    width: 120px;
+    margin: 20px 0;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    display: none;
+}
+
+.btn-switch {
+    width: 80px;
+    height: 40px;
+    margin: 20px;
+    background: gray;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    position: relative;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-switch:checked {
+    background-image: linear-gradient(320deg, #43c6ac, #f8ffae, #43c6ac);
+}
+
+.btn-switch:before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+    position: absolute;
+    transform: translateX(0);
+    transition: .5s;
+}
+
+.btn-switch:checked:before {
+    transform: translateX(40px);
+}
+
+.btn-switch:hover {
+    background-image: linear-gradient(320deg, #43c6ac, #f8ffae, #43c6ac);
+}
+
+/* History (Dark mode) */
+
+.history-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.history {
+    font-size: 0;
+    transform: translateY(50px);
+    transition: .3s;
+}
+
+.history.show {
+    width: 340px;
+    height: 550px;
+    padding: 20px;
+    background: black;
+    color: orangered;
+    font-family: 'Century Gothic';
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    overflow: auto;
+    transform: translateY(0);
+}
+
+.btn-history {
+    background: red;
+}
+
+.btn-history.show {
+    width: 50px;
+    height: 50px;
+    margin-top: -60px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 0 white;
+}
+
+.btn-history:hover {
+    background: red;
+    color: black;
+}
+
+.btn-history-c {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.btn-history-c.show {
+    display: block;
+}
+
+.btn-history-c:hover {
+    transform: translateX(-50%) scale(1.05, 1.05);
+}
+
+/* History (Light mode) */
+
+.light .history.show {
+    background: rgba(230, 230, 230);
+    color: blue;
+}
+
+.light .btn-history {
+    background: #0083b0;
+}
+
+.light .btn-history.show {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.light .btn-history:hover {
+    background: #0083b0;
+    color: black;
+}
+
+.light .btn-history-c {
+    box-shadow: 0 0 0 0 white;
+}
+
+.light .btn-history-c:hover {
+    transform: translateX(-50%) scale(1.05, 1.05);
+}

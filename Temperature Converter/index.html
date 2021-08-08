@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+
+    <div class="container">
+        <select name="temperature" id="temperature">
+            <option value="celsius">Celsius</option>
+            <option value="reamur">Reamur</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+
+        <div class="temp-value">
+            <input type="text" id="input">
+            <span id="temp-name"></span>
+        </div>
+
+        <h2>is equal to</h2>
+
+        <div class="result">
+            <div id="first-result"></div>
+            <div id="first-temp-name"></div>    
+            <div id="second-result"></div>
+            <div id="second-temp-name"></div>    
+            <div id="third-result"></div>
+            <div id="third-temp-name"></div>    
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

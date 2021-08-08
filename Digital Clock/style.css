@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic';
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(120deg, #060a1f, rgb(0, 0, 50));
+}
+
+.show {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status, .button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: red;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1rem;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .5);
+    cursor: default;
+    transition: .3s;
+}
+
+.button {
+    background: greenyellow;
+    cursor: pointer;
+}
+
+.status:hover, .button:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.day {
+    margin: 20px 0;
+    padding: 15px 0;
+    background: black;
+    color: green;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    transition: .3s;
+}
+
+.day:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.mon, .tue, .wed, .thu, .fri, .sat, .sun {
+    margin: 0 15px;
+}
+
+.mon:hover, .tue:hover, .wed:hover, .thu:hover, .fri:hover, .sat:hover, .sun:hover {
+    color: greenyellow;
+}
+
+.glow {
+    color: greenyellow;
+}
+
+.glow:hover {
+    color: yellow;
+}
+
+h2 {
+    margin: 0 20px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    display: block;
+    cursor: default;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time div {
+    position: relative;
+    margin: 0 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, .2));
+}
+
+.time div span {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 120px;
+    background: blue;
+    color: white;
+    font-size: 5rem;
+    font-weight: 500;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .5);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    transition: .3s;
+}
+
+.time div span:nth-child(2) {
+    height: 40px;
+    background: black;
+    color: blue;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    box-shadow: none;
+    z-index: 9;
+}
+
+.time div:hover span:first-child {
+    background: rgb(70, 203, 255);
+    transform: scale(1.1, 1.1);
+}
+
+.time div:hover span:nth-child(2) {
+    color: rgb(70, 203, 255);
+}
+
+.time div:nth-child(2) span {
+    background: orange;
+    transition: .3s;
+}
+
+.time div:nth-child(2) span:nth-child(2) {
+    background: black;
+    color: orange;
+}
+
+.time div:nth-child(2):hover span:first-child {
+    background: orangered;
+    transform: scale(1.1, 1.1);
+}
+
+.time div:nth-child(2):hover span:nth-child(2) {
+    color: orangered;
+}
+
+.time div:last-child span {
+    background: #ff006a;
+    transition: .3s;
+}
+
+.time div:last-child span:nth-child(2) {
+    background: black;
+    color: #ff006a;
+}
+
+.time div:last-child:hover span:first-child {
+    background: red;
+    transform: scale(1.1, 1.1);
+}
+
+.time div:last-child:hover span:nth-child(2) {
+    color: red;
+}
+
+.hide {
+    display: none;
+}

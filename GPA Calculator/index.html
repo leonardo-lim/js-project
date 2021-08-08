@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+</head>
+<body>
+    <h1 class="title">GPA Calculator</h1>
+
+    <div class="container">    
+        <div id="course-list">
+            <div class="course-input">
+                <i class="fa fa-book"></i>
+                <input type="text" id="course" placeholder="Course" autofocus="on">
+            </div>
+        
+            <div class="score-input">
+                <i class="fa fa-divide"></i>
+                <input type="text" id="score" placeholder="Score">
+            </div>
+
+            <div class="credit-input">
+                <i class="fa fa-percent"></i>
+                <input type="text" id="credit" placeholder="SCU">
+            </div>
+        
+            <div class="btn">
+                <button type="button" id="add"><i class="fa fa-plus"></i><br>Add Course</button>
+                <button type="button" id="check"><i class="fa fa-check"></i><br>Check GPA</button>
+            </div>
+        </div>
+        
+        <div id="grade"></div>
+        <div id="final-score"></div>
+        <button type="button" id="refresh" hidden><i class="fas fa-times"></i><br>Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

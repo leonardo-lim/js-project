@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="switch">
+        <label class="text">Light mode</label>
+        <input type="checkbox" class="btn-switch">
+    </div>
+
+    <div class="container">
+        <div class="screen">
+            <div class="previous"></div>
+            <div class="current"></div>
+        </div>
+
+        <div class="operator">
+            <button type="button" class="diff-color" id="btn-c">C</button>
+            <button type="button" class="double diff-color" id="btn-del"><i class="fa fa-backspace"></i></button>
+            <button type="button" class="btn-operator btn-num diff-color"><i class="fa fa-plus"></i></button>
+
+            <button type="button" class="btn-num">7</button>     
+            <button type="button" class="btn-num">8</button>     
+            <button type="button" class="btn-num">9</button>
+            <button type="button" class="btn-operator btn-num diff-color"><i class="fa fa-minus"></i></button>
+
+            <button type="button" class="btn-num">4</button>     
+            <button type="button" class="btn-num">5</button>     
+            <button type="button" class="btn-num">6</button>     
+            <button type="button" class="btn-operator btn-num diff-color"><i class="fa fa-times"></i></button>
+                
+            <button type="button" class="btn-num">1</button>     
+            <button type="button" class="btn-num">2</button>     
+            <button type="button" class="btn-num">3</button>     
+            <button type="button" class="btn-operator btn-num diff-color"><i class="fa fa-divide"></i></button>
+            
+            <button type="button" class="btn-history"><i class="fa fa-history"></i></button>
+            <button type="button" class="btn-num">0</button>
+            <button type="button" id="btn-dec">.</button>
+            <button type="button" class="diff-color" id="btn-equal"><i class="fa fa-equals"></i></button>
+        </div>
+    </div>
+
+    <div class="history-container">
+        <div class="history"></div>
+        <button type="button" class="btn-history-c"><i class="fa fa-trash"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

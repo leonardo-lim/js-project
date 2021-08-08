@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="stopwatch">
+        <div class="time">
+            <span id="hour">00</span>
+            <span id="minute">00</span>
+            <span id="second">00</span>
+            <span id="milisecond">00</span>
+        </div>
+
+        <div class="button">
+            <button type="button" id="lap" disabled><i class="fa fa-flag"></i></button>
+            <div class="shadow1"></div>
+            <button type="button" id="start-stop"><i class="fa fa-play"></i></button>
+            <div class="shadow2"></div>
+            <button type="button" id="reset" disabled><i class="fa fa-undo"></i></button>
+            <div class="shadow3"></div>
+        </div>
+
+        <div class="lap">
+            <h3 id="lap-text">Laps</h3>
+            <div id="lap-time"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
